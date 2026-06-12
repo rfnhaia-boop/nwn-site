@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWN Studio | Criação de Sites Profissionais e de Alta Conversão</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Garanta seu site profissional de alta conversão com nossa promoção especial de lançamento. Apenas R$ 850,00! Design premium, responsivo e otimizado para o Google.">
+    <meta name="keywords" content="criação de sites, landing page, portfolio, e-commerce, desenvolvedor front-end, site profissional, promoção site">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Instagram, WhatsApp, Facebook sharing) -->
+    <meta property="og:title" content="NWN Studio | Criação de Sites Profissionais">
+    <meta property="og:description" content="Sites modernos, ultra rápidos e que vendem mais. Garanta sua vaga na promoção por R$ 850.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nwnstudio.com.br">
+    
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.jpg" alt="NWN Logo">
+                <span>NWN</span>Studio
+            </a>
+            <ul class="nav-links">
+                <li><a href="#promo">Promoção</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#processo">Como Funciona</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#" class="btn btn-secondary btn-whatsapp-direct nav-cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                Falar Conosco
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <!-- Hero Background Video -->
+        <video autoplay loop muted playsinline class="hero-video-bg">
+            <source src="assets/video-logo-nwn.mp4" type="video/mp4">
+            <source src="assets/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title">Sites Profissionais de Alta Conversão que <span>Escalam seu Negócio</span></h1>
+            <p class="hero-description">
+                Conecte-se com mais clientes vindo do Instagram ou canais diretos. Criamos sites modernos, otimizados e prontos para converter visitas em vendas reais.
+            </p>
+            <div class="hero-actions">
+                <a href="#promo" class="btn btn-primary">Aproveitar Promoção</a>
+                <a href="#calculadora" class="btn btn-secondary">Calcular Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decorative Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- PROMOTIONAL CAMPAIGN -->
+    <section id="promo" class="section">
+        <div class="container">
+            <div class="promo-box">
+                <div class="promo-grid">
+                    <div class="promo-info">
+                        <div class="price-badge">Oferta Limitada</div>
+                        <h3 style="margin-top: 10px;">Campanha de Lançamento: 10 Sites Iniciais</h3>
+                        <p>
+                            Para expandir nosso portfólio oficial, estamos desenvolvendo os primeiros 10 sites com um desconto de 66%. Você garante um projeto completo com design personalizado, SEO e integrações pelo menor preço do mercado.
+                        </p>
+                        <div class="promo-progress-wrapper">
+                            <div class="progress-label">
+                                <span id="promo-count">3 de 10 sites já garantidos!</span>
+                                <span id="promo-remaining">Restam apenas 7 vagas nesse valor promocional.</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div id="promo-fill" class="progress-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promo-pricing">
+                        <div class="price-old">De R$ 2.500,00</div>
+                        <div class="price-new">R$ 850<span>,00</span></div>
+                        <p style="color: var(--text-neon); font-weight: 600; font-size: 0.9rem; margin-bottom: 15px;">À vista ou em até 12x no cartão</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp-direct" style="width: 100%;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Quero ser o 4º Cliente
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            <p class="section-subtitle">Interaja com os projetos reais desenvolvidos por nós. Alterne entre os modos celular e computador para testar a responsividade em tempo real.</p>
+            
+            <div class="showcase-container">
+                <!-- Left: Sidebar controls and info -->
+                <div class="showcase-info">
+                    <div class="showcase-tabs">
+                        <button class="showcase-tab active" data-project="morada">
+                            <h4>Morada do Açaí</h4>
+                            <span>Landing Page & Cardápio Digital</span>
+                        </button>
+                        <button class="showcase-tab" data-project="balbo">
+                            <h4>Isabela Balbo</h4>
+                            <span>Advocacia & Consultoria</span>
+                        </button>
+                        <button class="showcase-tab" data-project="vita">
+                            <h4>Clínica Vita</h4>
+                            <span>Saúde & Agendamento</span>
+                        </button>
+                    </div>
+
+                    <!-- Project description blocks (toggled by JS) -->
+                    <div class="project-details" id="details-morada">
+                        <p class="project-desc">
+                            Uma landing page desenvolvida para captação de pedidos e fortalecimento da marca local de uma açaíteria. Conta com cardápio dinâmico, integração com carrinho de compras e envio de pedidos direto para o WhatsApp.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HTML5 / CSS3</span>
+                            <span class="portfolio-tag">JavaScript Reativo</span>
+                            <span class="portfolio-tag">WhatsApp API</span>
+                            <span class="portfolio-tag">Foco em Conversão</span>
+                        </div>
+                        <div class="device-toggles" id="morada-device-toggles">
+                            <button class="btn btn-secondary btn-device active" data-device="desktop">
+                                Desktop
+                            </button>
+                            <button class="btn btn-secondary btn-device" data-device="mobile">
+                                Celular
+                            </button>
+                        </div>
+                        <a href="projects/morada-do-acai/index.html" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
+                            Abrir em Nova Aba
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="project-details hidden" id="details-balbo">
+                        <p class="project-desc">
+                            Landing page institucional e altamente sofisticada desenvolvida para a Dra. Isabela Balbo. Transmite autoridade e profissionalismo com seções explicativas de atuação, design elegante com efeitos metálicos e integração direta com WhatsApp.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HTML5 / CSS3</span>
+                            <span class="portfolio-tag">JavaScript</span>
+                            <span class="portfolio-tag">Design Exclusivo</span>
+                            <span class="portfolio-tag">Otimização de SEO</span>
+                        </div>
+                        <div class="device-toggles" id="balbo-device-toggles">
+                            <button class="btn btn-secondary btn-device active" data-device="desktop">
+                                Desktop
+                            </button>
+                            <button class="btn btn-secondary btn-device" data-device="mobile">
+                                Celular
+                            </button>
+                        </div>
+                        <a href="https://isabelabalbo.vercel.app/" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
+                            Abrir em Nova Aba
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="project-details hidden" id="details-vita">
+                        <p class="project-desc">
+                            Landing page médica elegante desenvolvida para captação de consultas particulares. Traz design focado na credibilidade profissional, formulário de triagem, galeria institucional e integração com o Google Agenda / Calendly para autoagendamento.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">SEO Google Pro</span>
+                            <span class="portfolio-tag">Agendamento API</span>
+                            <span class="portfolio-tag">Design Responsivo</span>
+                            <span class="portfolio-tag">Google Maps API</span>
+                        </div>
+                        <p class="static-mockup-note" style="color: var(--text-neon); font-size: 0.85rem; margin-top: 15px; font-weight: 500;">
+                            ℹ️ Este layout está sob contrato de design.
+                        </p>
+                        <a href="#" class="btn btn-secondary btn-whatsapp-direct" style="margin-top: 10px; width: 100%;">
+                            Perguntar Sobre Este Layout
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Visualizer device mockup -->
+                <div class="showcase-preview">
+                    <!-- Browser container (Desktop Mode by default) -->
+                    <div class="mock-device desktop" id="preview-frame-container">
+                        <!-- Browser Header -->
+                        <div class="mock-device-header">
+                            <div class="mock-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="mock-url-bar" id="mock-url-display">
+                                nwnstudio.com.br/projects/morada-do-acai
+                            </div>
+                        </div>
+                        <!-- Browser Iframe / Image fallback -->
+                        <div class="mock-device-viewport">
+                            <!-- Live iframe loading Morada do Acai -->
+                            <iframe src="projects/morada-do-acai/index.html" class="portfolio-iframe" id="portfolio-iframe" title="Preview do Projeto"></iframe>
+                            
+                            <!-- Fallback static previews for Next.js / Other projects -->
+                            <div class="preview-fallback hidden" id="fallback-ceasa">
+                                <img src="assets/mockup_ceasa.png" alt="Preview Ceasa Delivery" class="portfolio-fallback-img">
+                            </div>
+
+                            <div class="preview-fallback hidden" id="fallback-vita">
+                                <img src="assets/mockup_vita.png" alt="Preview Clínica Vita" class="portfolio-fallback-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR SECTION -->
+    <section id="calculadora" class="section">
+        <div class="container">
+            <h2 class="section-title">Calculadora de Orçamento</h2>
+            <p class="section-subtitle">Monte o site ideal para a sua necessidade de forma transparente e rápida. Personalize as integrações e veja o valor na hora.</p>
+            
+            <div class="calculator-container">
+                <!-- Left: Options Checklist -->
+                <div class="calc-options">
+                    <div>
+                        <h4 class="calc-group-title">Funcionalidades & Integrações</h4>
+                        
+                        <!-- Item 1 -->
+                        <div class="calc-item" data-id="api" data-price="150">
+                            <div class="calc-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">Integração de APIs</div>
+                                <div class="calc-item-desc">Conexão com sistemas externos (Ex: Google Maps, Correios, CRMs, APIs personalizadas).</div>
+                            </div>
+                            <div class="calc-item-price">+ R$ 150</div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="calc-item" data-id="cms" data-price="400">
+                            <div class="calc-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">Painel Administrativo (CMS)</div>
+                                <div class="calc-item-desc">Interface própria para você editar textos, imagens, banners ou produtos de forma simples e rápida.</div>
+                            </div>
+                            <div class="calc-item-price">+ R$ 400</div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="calc-item" data-id="seo" data-price="100">
+                            <div class="calc-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">SEO Avançado</div>
+                                <div class="calc-item-desc">Indexação completa e estruturada para colocar suas páginas nas primeiras posições de busca do Google.</div>
+                            </div>
+                            <div class="calc-item-price">+ R$ 100</div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="calc-item" data-id="blog" data-price="150">
+                            <div class="calc-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">Blog Integrado</div>
+                                <div class="calc-item-desc">Seção para publicação de notícias ou artigos, essencial para captação orgânica de clientes.</div>
+                            </div>
+                            <div class="calc-item-price">+ R$ 150</div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="calc-item" data-id="payments" data-price="250">
+                            <div class="calc-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">Gateway de Pagamentos</div>
+                                <div class="calc-item-desc">Integração para receber pagamentos via Pix, Boleto ou Cartão de Crédito diretamente no site (Stripe/Mercado Pago).</div>
+                            </div>
+                            <div class="calc-item-price">+ R$ 250</div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="calc-item" data-id="support" data-price="300">
+                            <div class="calc-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">Suporte e Manutenção (6 meses)</div>
+                                <div class="calc-item-desc">Cuidamos da sua infraestrutura, atualizações de segurança e backups semanais para evitar que seu site caia.</div>
+                            </div>
+                            <div class="calc-item-price">+ R$ 300</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Summary Card -->
+                <div class="glass-card calc-summary">
+                    <h3 class="calc-summary-title">Resumo do Projeto</h3>
+                    
+                    <div id="summary-list" class="summary-list">
+                        <!-- Dynamic content -->
+                    </div>
+                    
+                    <div class="summary-total">
+                        <span>Investimento Total</span>
+                        <div id="total-display" class="summary-total-price">R$ 850,00</div>
+                    </div>
+                    
+                    <a href="#" id="btn-send-budget" target="_blank" class="btn btn-primary calc-cta">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        Garantir Site Personalizado
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK PROCESS SECTION -->
+    <section id="processo" class="section">
+        <div class="container">
+            <h2 class="section-title">Como Criamos Seu Site</h2>
+            <p class="section-subtitle">Nosso processo é simples, rápido e transparente do início ao fim.</p>
+            
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="process-icon-container">1</div>
+                    <h3>Briefing</h3>
+                    <p>Entendemos suas necessidades, o seu público-alvo e definimos os objetivos de venda do site.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="process-icon-container">2</div>
+                    <h3>Layout & Copy</h3>
+                    <p>Estruturamos as seções e escrevemos textos focados em conversão, criando o visual inicial.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="process-icon-container">3</div>
+                    <h3>Desenvolvimento</h3>
+                    <p>Programamos o site do zero com as melhores práticas de velocidade, responsividade e SEO.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="process-icon-container">4</div>
+                    <h3>Hospedagem & Go-Live</h3>
+                    <p>Configuramos o seu domínio, hospedagem segura, SSL gratuito e o colocamos no ar com sucesso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tudo o que você precisa saber sobre o desenvolvimento do seu novo site.</p>
+            
+            <div class="faq-container">
+                <!-- Q1 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Quanto tempo demora para o site ficar pronto?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            O prazo padrão de desenvolvimento é de 7 a 15 dias úteis após o envio de todos os dados do briefing (textos, logos e fotos). Caso seu site precise de painel administrativo complexo ou integrações de APIs adicionais, o prazo pode ser ajustado em comum acordo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Preciso pagar mensalidade?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Não cobramos nenhuma mensalidade de desenvolvimento! O site é 100% seu. Os únicos custos contínuos do site são a Hospedagem (onde o site fica guardado na nuvem) e o Domínio (o seu link .com.br). O domínio custa apenas R$ 40,00 por ano e a hospedagem custa em média de R$ 15,00 a R$ 25,00 por mês. Cuidamos de toda essa configuração inicial para você sem custo extra.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Como funciona o pagamento?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Para garantir a vaga promocional e iniciarmos o projeto, solicitamos uma entrada de 50%. Os 50% restantes são pagos somente na entrega, quando o site estiver finalizado no servidor de testes e aprovado por você. O pagamento pode ser feito via Pix ou parcelado em até 12x no cartão de crédito através de link de pagamento seguro.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>O site é adaptável para celulares?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Com certeza. Mais de 80% dos acessos a sites atualmente vêm de redes sociais (como o seu Instagram) pelo celular. Desenvolvemos com metodologia Mobile First, garantindo que o seu site carregue rápido e funcione de maneira perfeita em smartphones, tablets e computadores de qualquer tamanho.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Eu terei suporte se precisar alterar algo futuramente?</h3>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Sim, fornecemos 30 dias de suporte gratuito pós-entrega para resolver qualquer bug ou ajuste fino. Depois desse prazo, você tem autonomia total para gerenciar as alterações ou pode nos chamar para demandas avulsas. Se preferir tranquilidade, oferecemos planos de manutenção mensal para backups e atualizações.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section cta-final">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Pronto para Transformar seu Negócio?</h2>
+            <p class="section-subtitle">Entre em contato agora e garanta seu site profissional com desconto exclusivo de lançamento.</p>
+            <a href="#" class="btn btn-primary btn-whatsapp-direct btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                Falar com a NWN Studio
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="assets/logo.jpg" alt="NWN Logo">
+                    <span>NWN</span>Studio
+                </a>
+                <p>Criando experiências digitais incríveis para destacar e elevar a presença digital do seu negócio.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link instagram-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link btn-whatsapp-direct" aria-label="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Links Úteis</h4>
+                <ul class="footer-links">
+                    <li><a href="#promo">Campanha Promocional</a></li>
+                    <li><a href="#portfolio">Projetos Recentes</a></li>
+                    <li><a href="#calculadora">Calculadora de Orçamento</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Contato e Suporte</h4>
+                <ul class="footer-links">
+                    <li>WhatsApp: <a href="#" class="btn-whatsapp-direct" style="color: var(--secondary); font-weight: 500;">Falar com Desenvolvedor</a></li>
+                    <li>Instagram: <a href="#" target="_blank" class="instagram-link username-placeholder" style="color: var(--secondary); font-weight: 500;">@seu.instagram</a></li>
+                    <li>Atendimento: Seg a Sex, das 9h às 18h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 NWN Studio. Todos os direitos reservados.</p>
+            <p>Desenvolvido com foco em alta performance e conversão.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script src="main.js"></script>
+</body>
+</html>
