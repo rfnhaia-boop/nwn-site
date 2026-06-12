@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Morada do Açaí - A Casa do Verdadeiro Açaí. Açaí puro de origem certificada, crepes artesanais, tapiocas e sucos naturais. Delivery no capricho!">
+  <meta name="keywords" content="açaí, açaí puro, crepes artesanais, sucos naturais, tapioca, delivery, morada do açaí">
+  <meta name="author" content="Morada do Açaí">
+  <title>Morada do Açaí | O Sabor do Norte, A Qualquer Hora</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <img src="images/logo.png?v=2" alt="Morada do Açaí">
+      <div class="loader-bar">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo">
+        <img src="images/logo.png?v=2" alt="Morada do Açaí Logo">
+        <div class="logo-text">
+          <span class="brand">Morada do Açaí</span>
+          <span class="tagline">Casa do Verdadeiro Açaí</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="active">Home</a>
+          <a href="#especialidades">Menu</a>
+          <a href="#monte-acai">Monte Seu Açaí</a>
+          <a href="cardapio.html?filter=crepes">Crepes</a>
+          <a href="cardapio.html?filter=sucos">Sucos</a>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <a href="https://wa.me/557133577733" target="_blank" rel="noopener" class="btn-order" id="btnOrder">
+          Peça Direto: Site Oficial
+          <span class="arrow">›</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <video autoplay loop muted playsinline poster="images/hero-bg.png" id="hero-video">
+        <source src="images/hero-video.mp4?v=3" type="video/mp4">
+        <img src="images/hero-bg.png" alt="Morada do Açaí Ambiente">
+      </video>
+    </div>
+    <div class="hero-content">
+      <h1>O Sabor do Norte,<br><span>A Qualquer Hora.</span></h1>
+      <p>Descubra a Casa do Verdadeiro Açaí e Nossos Novos Crepes Artesanais, Tapiocas e Sucos Naturais.</p>
+      <div class="hero-buttons">
+        <a href="#especialidades" class="btn-primary">
+          Veja o Cardápio Completo
+        </a>
+        <a href="#monte-acai" class="btn-secondary">
+          Monte Seu Açaí
+        </a>
+      </div>
+      <p class="hero-note">Faça seu pedido diretamente aqui no site para ofertas exclusivas e entrega mais ágil.</p>
+    </div>
+  </section>
+
+  <!-- Specialties Section -->
+  <section class="section specialties" id="especialidades">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Nosso Cardápio</div>
+        <h2 class="section-title">Nossas Especialidades</h2>
+        <p class="section-subtitle">Descubra a riqueza de cada detalhe e faça seu pedido direto.</p>
+      </div>
+
+      <div class="carousel-container reveal">
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Monte Seu Açaí Card -->
+            <div class="specialty-card">
+              <div class="specialty-card-header">
+                <h3>Monte Seu Açaí</h3>
+              </div>
+              <div class="specialty-card-body">
+                <p>Personalize seu açaí 100% Puro! Açaí de Origem Certificada, sem xarope de guaraná.</p>
+                <div class="specialty-card-image">
+                  <img src="images/acai-real.jpg?v=3" alt="Monte Seu Açaí Morada do Açaí">
+                </div>
+                <div class="specialty-items">
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Copo 300ml</div>
+                      <div class="specialty-item-desc">Açaí puro + 2 toppings</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 15,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Copo 500ml</div>
+                      <div class="specialty-item-desc">Açaí puro + 3 toppings</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 22,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Copo 700ml</div>
+                      <div class="specialty-item-desc">Açaí puro + 4 toppings</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 29,90</div>
+                  </div>
+                </div>
+                <button class="btn-add">Montar Agora →</button>
+              </div>
+            </div>
+
+            <!-- Tapiocas Card -->
+            <div class="specialty-card">
+              <div class="specialty-card-header">
+                <h3>Tapiocas Artesanais</h3>
+              </div>
+              <div class="specialty-card-body">
+                <p>Tapiocas feitas na hora com massa leve e recheios generosos. Uma delícia tradicional!</p>
+                <div class="specialty-card-image">
+                  <img src="images/tapioca-box.jpg?v=3" alt="Tapiocas Artesanais Morada do Açaí">
+                </div>
+                <div class="specialty-items">
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Queijo Coalho</div>
+                      <div class="specialty-item-desc">Queijo coalho derretido na chapa</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 12,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Frango com Catupiry</div>
+                      <div class="specialty-item-desc">Frango desfiado com Catupiry original</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 16,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Nutella com Morango</div>
+                      <div class="specialty-item-desc">Nutella cremosa com morangos frescos</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 15,90</div>
+                  </div>
+                </div>
+                <button class="btn-add">Pedir Agora →</button>
+              </div>
+            </div>
+
+            <!-- Crepes Card -->
+            <div class="specialty-card">
+              <div class="specialty-card-header">
+                <h3>Crepes Artesanais</h3>
+              </div>
+              <div class="specialty-card-body">
+                <p>Cada crepe é recheado com ingredientes frescos e artesanais. Novidade na Morada!</p>
+                <div class="specialty-card-image">
+                  <img src="images/crepe-box.jpg?v=3" alt="Crepes Artesanais Morada do Açaí">
+                </div>
+                <div class="specialty-items">
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Sabor Açaí Clássico</div>
+                      <div class="specialty-item-desc">Açaí, banana, granola, morango</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 18,50</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Sabor Norte-Sávia</div>
+                      <div class="specialty-item-desc">Castanha, cupuaçu, caramelo</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 21,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Sabor Tropical</div>
+                      <div class="specialty-item-desc">Manga, maracujá, coco</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 19,90</div>
+                  </div>
+                </div>
+                <button class="btn-add">Pedir Agora →</button>
+              </div>
+            </div>
+
+            <!-- Sucos Card -->
+            <div class="specialty-card">
+              <div class="specialty-card-header">
+                <h3>Sucos Naturais</h3>
+              </div>
+              <div class="specialty-card-body">
+                <p>Feito com frutas frescas, sem açúcar ou conservantes, prontinho para beber.</p>
+                <div class="specialty-card-image">
+                  <img src="images/sucos-real.jpg?v=3" alt="Sucos Naturais Morada do Açaí">
+                </div>
+                <div class="specialty-items">
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Laranja com Cenoura</div>
+                      <div class="specialty-item-desc">300ml · 100% natural</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 9,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Detox Verde</div>
+                      <div class="specialty-item-desc">Couve, pepino, maçã, gengibre</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 11,90</div>
+                  </div>
+                  <div class="specialty-item">
+                    <div class="specialty-item-info">
+                      <div class="specialty-item-name">Abacaxi com Hortelã</div>
+                      <div class="specialty-item-desc">300ml · Refrescante</div>
+                    </div>
+                    <div class="specialty-item-price">R$ 10,90</div>
+                  </div>
+                </div>
+                <button class="btn-add">Pedir Agora →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next" id="carouselNext" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+
+      <div class="specialties-action reveal">
+        <a href="cardapio.html" class="btn-view-menu">
+          Ver Cardápio Completo
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monte Seu Açaí Section -->
+  <section class="section monte-acai" id="monte-acai">
+    <div class="container">
+      <div class="monte-acai-content">
+        <div class="monte-acai-text reveal-left">
+          <div class="section-label" style="text-align: left;">Exclusivo</div>
+          <h2>Monte Seu <span>Açaí</span> do Seu Jeito!</h2>
+          <p class="lead">Personalize seu açaí 100% Puro! Escolha o tamanho, cremes, frutas e toppings favoritos. Açaí de Origem Certificada, sem xarope de guaraná.</p>
+
+          <div class="steps-grid">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-info">
+                <h4>Escolha o Copo</h4>
+                <p>300ml, 500ml ou 700ml de açaí puro</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-info">
+                <h4>Cremes</h4>
+                <p>Nutella, leite condensado, leite em pó e mais</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-info">
+                <h4>Frutas</h4>
+                <p>Banana, morango, kiwi, manga e outras</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-info">
+                <h4>Toppings</h4>
+                <p>Granola artesanal, pé de moleque e mais</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="monte-acai-visual reveal-right">
+          <img src="images/crepes-banner.jpg" alt="Novos Crepes Artesanais Morada do Açaí">
+          <div class="monte-acai-badge">
+            <span class="badge-highlight">100% PURO</span>
+            <span class="badge-text">Origem Norte</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Section -->
+  <section class="section delivery" id="delivery">
+    <div class="delivery-bg">
+      <img src="images/wood-texture.png?v=2" alt="Background">
+    </div>
+    <div class="container">
+      <div class="delivery-content">
+        <div class="delivery-text reveal-left">
+          <div class="section-label" style="text-align: left; color: var(--gold);">Delivery</div>
+          <h2>Delivery <span>No Capricho!</span></h2>
+          <p>Faça seu pedido direto com a Morada! Entregas rápidas, cardápio completo e ofertas especiais. Use o site oficial.</p>
+
+          <div class="delivery-features">
+            <div class="delivery-feature">
+              <div class="delivery-feature-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+              </div>
+              <div class="delivery-feature-text">
+                <h4>Entregas Rápidas</h4>
+                <p>Chegando fresquinho até você</p>
+              </div>
+            </div>
+            <div class="delivery-feature">
+              <div class="delivery-feature-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+              <div class="delivery-feature-text">
+                <h4>Melhores Preços</h4>
+                <p>Direto, sem taxas de marketplace</p>
+              </div>
+            </div>
+            <div class="delivery-feature">
+              <div class="delivery-feature-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="16" r="4"></circle>
+                  <circle cx="8" cy="11" r="3.5"></circle>
+                  <circle cx="16" cy="11" r="3.5"></circle>
+                  <path d="M12 7.5c.5-2.5 2-4.5 4.5-4.5 0 2.5-1.5 4.5-4.5 4.5z"></path>
+                  <path d="M12 7.5C11.5 5 10 3 7.5 3c0 2.5 1.5 4.5 4.5 4.5z"></path>
+                  <path d="M12 7.5V12"></path>
+                </svg>
+              </div>
+              <div class="delivery-feature-text">
+                <h4>Açaí de Verdade</h4>
+                <p>100% puro, origem certificada do Norte</p>
+              </div>
+            </div>
+            <div class="delivery-feature">
+              <div class="delivery-feature-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 22c1.25-6.7 5.85-11.3 12.5-12.5"></path>
+                  <path d="M14 7.5c2.5-.5 4.5-2 4.5-4.5-2.5 0-4.5 1.5-4.5 4.5z"></path>
+                  <path d="M14 7.5c-.5-2.5-2-4.5-4.5-4.5 0 2.5 1.5 4.5 4.5 4.5z"></path>
+                  <path d="M14 7.5v8c0 3.3-2.7 6-6 6"></path>
+                </svg>
+              </div>
+              <div class="delivery-feature-text">
+                <h4>Apoie o Produtor Local</h4>
+                <p>Direto da comunidade para sua casa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="delivery-buttons">
+            <a href="https://wa.me/557133577733" target="_blank" rel="noopener" class="btn-delivery-direto">
+              Peça Direto
+            </a>
+            <a href="#" class="btn-delivery-ifood">
+              Peça no iFood
+            </a>
+          </div>
+        </div>
+
+        <div class="delivery-image reveal-right">
+          <img src="images/crepe-box.jpg" alt="Delivery Morada do Açaí">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="sobre">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image-wrapper reveal-left">
+          <img src="images/tapiocas-banner.jpg" alt="Novas Tapiocas Artesanais Morada do Açaí">
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-label" style="text-align: left;">Nossa História</div>
+          <h2>Sobre a <span>Morada</span> do Açaí</h2>
+          <p>Nascemos com a missão de trazer o verdadeiro sabor do açaí paraense para todo o Brasil. Nosso açaí é 100% puro, de origem certificada, direto do Norte do país.</p>
+          <p>Além do açaí, expandimos nosso cardápio com crepes artesanais, tapiocas tradicionais e sucos naturais feitos na hora, sempre com ingredientes frescos e selecionados.</p>
+          <p>Na Morada, cada detalhe importa — do sabor à apresentação, do atendimento à entrega. Porque nosso compromisso é com a sua satisfação.</p>
+
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="number" data-target="100">0</div>
+              <div class="label">% Puro</div>
+            </div>
+            <div class="about-stat">
+              <div class="number" data-target="5000">0</div>
+              <div class="label">Clientes Felizes</div>
+            </div>
+            <div class="about-stat">
+              <div class="number" data-target="30">0</div>
+              <div class="label">Sabores</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <img src="images/logo.png?v=2" alt="Morada do Açaí">
+            <div class="logo-text">
+              <span class="brand">Morada do Açaí</span>
+              <span class="tagline">Origem do Norte</span>
+            </div>
+          </a>
+          <p>A Casa do Verdadeiro Açaí. Sabor autêntico do Norte com ingredientes frescos e de qualidade. Faça seu pedido!</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://wa.me/557133577733" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#especialidades">Cardápio</a></li>
+            <li><a href="#monte-acai">Monte Seu Açaí</a></li>
+            <li><a href="#delivery">Delivery</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Cardápio</h4>
+          <ul>
+            <li><a href="#especialidades">Açaí Puro</a></li>
+            <li><a href="#especialidades">Crepes Artesanais</a></li>
+            <li><a href="#especialidades">Tapiocas</a></li>
+            <li><a href="#especialidades">Sucos Naturais</a></li>
+            <li><a href="#especialidades">Combos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <div class="footer-contact-item">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </span>
+            <div class="info">
+              <strong>Telefone</strong>
+              (71) 3357-7733
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            <div class="info">
+              <strong>E-mail</strong>
+              moradadoacai@gmail.com
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            <div class="info">
+              <strong>Endereço</strong>
+              Imbuí, Salvador - BA<br>Brasil
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            <div class="info">
+              <strong>Horário</strong>
+              09:00 às 17:00
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Morada do Açaí. Todos os direitos reservados.</p>
+        <p>Feito com 💚 para os amantes do açaí</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/557133577733" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Floating Cart Button -->
+  <button class="cart-float-btn" id="cartFloatBtn" aria-label="Ver Carrinho">
+    <span class="cart-icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+    </span>
+    <span class="cart-badge" id="cartBadge">0</span>
+  </button>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Seu Pedido</h3>
+      <button class="close-drawer" id="closeDrawer">&times;</button>
+    </div>
+    
+    <!-- Cart Items View -->
+    <div class="cart-view" id="cartView">
+      <div class="cart-items" id="cartItemsList">
+        <div class="empty-cart-message">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <p>Seu carrinho está vazio.</p>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">R$ 0,00</span>
+        </div>
+        <button class="btn-checkout-next" id="btnCheckoutNext" disabled>Avançar para o Pedido</button>
+      </div>
+    </div>
+
+    <!-- Checkout Form View -->
+    <div class="checkout-view hidden" id="checkoutView">
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="clientName">Seu Nome *</label>
+          <input type="text" id="clientName" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="clientPhone">Seu WhatsApp *</label>
+          <input type="tel" id="clientPhone" required placeholder="(DD) 99999-9999">
+        </div>
+        <div class="form-group">
+          <label>Como deseja receber? *</label>
+          <div class="delivery-options">
+            <label class="delivery-type-label active">
+              <input type="radio" name="deliveryType" value="delivery" checked>
+              <span>Delivery (+R$ 5,00)</span>
+            </label>
+            <label class="delivery-type-label">
+              <input type="radio" name="deliveryType" value="retirada">
+              <span>Retirada no Local</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Address Fields -->
+        <div class="address-fields" id="addressFields">
+          <div class="form-group">
+            <label for="street">Rua e Número *</label>
+            <input type="text" id="street" placeholder="Rua das Flores, 123">
+          </div>
+          <div class="form-group">
+            <label for="neighborhood">Bairro *</label>
+            <input type="text" id="neighborhood" placeholder="Imbuí">
+          </div>
+          <div class="form-group">
+            <label for="complement">Complemento / Referência</label>
+            <input type="text" id="complement" placeholder="Apto 101, próximo ao mercado">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Forma de Pagamento *</label>
+          <select id="paymentMethod" required>
+            <option value="pix">Pix</option>
+            <option value="cartao">Cartão de Crédito / Débito</option>
+            <option value="dinheiro">Dinheiro</option>
+          </select>
+        </div>
+        
+        <div class="form-group hidden" id="changeGroup">
+          <label for="cashChange">Troco para quanto?</label>
+          <input type="number" id="cashChange" placeholder="Ex: 50" min="0">
+        </div>
+
+        <div class="checkout-actions">
+          <button type="button" class="btn-checkout-back" id="btnCheckoutBack">Voltar</button>
+          <button type="submit" class="btn-checkout-submit">Enviar via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+  <script>
+    // Force hero video to play
+    document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('hero-video');
+      if (video) {
+        video.muted = true;
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function() {
+            // Autoplay blocked, try on user interaction
+            document.addEventListener('click', function() {
+              video.play();
+            }, { once: true });
+            document.addEventListener('scroll', function() {
+              video.play();
+            }, { once: true });
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

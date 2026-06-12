@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Morada do Açaí - Monte seu Açaí do seu jeito com ingredientes selecionados de marcas premium. Delivery no capricho!">
+  <meta name="keywords" content="açaí, monte seu açaí, açaí personalizado, delivery, morada do açaí">
+  <meta name="author" content="Morada do Açaí">
+  <title>Monte Seu Açaí | Morada do Açaí</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <img src="images/logo.png?v=2" alt="Morada do Açaí">
+      <div class="loader-bar">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html#home" class="logo">
+        <img src="images/logo.png?v=2" alt="Morada do Açaí Logo">
+        <div class="logo-text">
+          <span class="brand">Morada do Açaí</span>
+          <span class="tagline">Casa do Verdadeiro Açaí</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <div class="nav-links" id="navLinks">
+          <a href="index.html#home">Home</a>
+          <a href="cardapio.html">Menu</a>
+          <a href="#" class="active">Monte Seu Açaí</a>
+          <a href="cardapio.html?filter=crepes">Crepes</a>
+          <a href="cardapio.html?filter=sucos">Sucos</a>
+          <a href="index.html#sobre">Sobre Nós</a>
+          <a href="index.html#contato">Contato</a>
+        </div>
+
+        <a href="https://wa.me/557133577733" target="_blank" rel="noopener" class="btn-order" id="btnOrder">
+          Peça Direto: Site Oficial
+          <span class="arrow">›</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mount Hero Banner -->
+  <section class="montar-hero">
+    <div class="container reveal">
+      <h1 class="montar-hero-title">Monte Seu Açaí</h1>
+      <p class="montar-hero-desc">Selecione o tamanho ideal e personalize com as melhores marcas de cremes, frutas frescas e acompanhamentos crocantes.</p>
+    </div>
+  </section>
+
+  <!-- Mount Customizer Section -->
+  <section class="montar-section">
+    <div class="container">
+      <div class="montar-container">
+        
+        <!-- Left Column: Customization Options Form -->
+        <div class="montar-options-col">
+          <form id="acaiForm">
+            <!-- Size Selector -->
+            <div class="modal-section reveal">
+              <span class="section-title">1. Escolha o Tamanho *</span>
+              <div class="tiles-grid size-tiles">
+                <label class="tile-option">
+                  <input type="radio" name="acaiSize" value="300ml" data-price="15.90" checked>
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cup-300"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Copo 300ml</span>
+                      <span class="tile-desc">Açaí Puro + 2 Adicionais Grátis</span>
+                    </div>
+                    <div class="tile-price">R$ 15,90</div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+                
+                <label class="tile-option">
+                  <input type="radio" name="acaiSize" value="500ml" data-price="22.90">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cup-500"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Copo 500ml</span>
+                      <span class="tile-desc">Açaí Puro + 3 Adicionais Grátis</span>
+                    </div>
+                    <div class="tile-price">R$ 22,90</div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="radio" name="acaiSize" value="700ml" data-price="29.90">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cup-700"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Copo 700ml</span>
+                      <span class="tile-desc">Açaí Puro + 4 Adicionais Grátis</span>
+                    </div>
+                    <div class="tile-price">R$ 29,90</div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Cremes Selection (Max 3) -->
+            <div class="modal-section reveal">
+              <span class="section-title">2. Cremes Adicionais (Selecione até 3)</span>
+              <div class="tiles-grid option-tiles" data-limit="3" data-category="Cremes">
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiCremes" value="Nutella">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cream-nutella"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Nutella</span>
+                      <span class="tile-desc">Original Ferrero</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiCremes" value="Leite Condensado">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cream-leite-moca"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Leite Moça</span>
+                      <span class="tile-desc">Condensado Nestlé</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiCremes" value="Creme de Ninho">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cream-creme-ninho"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Creme de Ninho</span>
+                      <span class="tile-desc">Receita Especial da Casa</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiCremes" value="Ovomaltine">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cream-ovomaltine"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Ovomaltine</span>
+                      <span class="tile-desc">Creme Crocante</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiCremes" value="Doce de Leite">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cream-doce-leite"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Doce de Leite</span>
+                      <span class="tile-desc">Tradicional Viçosa</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiCremes" value="Creme de Cupuaçu">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-cream-creme-cupuacu"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Creme de Cupuaçu</span>
+                      <span class="tile-desc">Artesanal e Refrescante</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Frutas Selection (Max 3) -->
+            <div class="modal-section reveal">
+              <span class="section-title">3. Frutas Adicionais (Selecione até 3)</span>
+              <div class="tiles-grid option-tiles" data-limit="3" data-category="Frutas">
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiFrutas" value="Morango">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-fruit-morango"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Morangos</span>
+                      <span class="tile-desc">Fatiados e Frescos</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiFrutas" value="Banana">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-fruit-banana"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Banana</span>
+                      <span class="tile-desc">Banana Prata em Rodelas</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiFrutas" value="Kiwi">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-fruit-kiwi"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Kiwi</span>
+                      <span class="tile-desc">Fresco e Suavemente Ácido</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiFrutas" value="Manga">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-fruit-manga"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Manga</span>
+                      <span class="tile-desc">Cubos de Manga Palmer</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiFrutas" value="Abacaxi">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-fruit-abacaxi"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Abacaxi</span>
+                      <span class="tile-desc">Pedaços em Calda Leve</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiFrutas" value="Coco Ralado">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-fruit-coco-ralado"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Coco Ralado</span>
+                      <span class="tile-desc">Flocos de Coco Úmido</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Toppings Selection (Max 3) -->
+            <div class="modal-section reveal">
+              <span class="section-title">4. Acompanhamentos (Selecione até 3)</span>
+              <div class="tiles-grid option-tiles" data-limit="3" data-category="Toppings">
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Granola Artesanal">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-granola"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Granola</span>
+                      <span class="tile-desc">Granola Crocante Especial</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Leite em Pó Ninho">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-leite-ninho"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Leite Ninho</span>
+                      <span class="tile-desc">Leite em Pó Nestlé</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="KitKat">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-kitkat"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">KitKat</span>
+                      <span class="tile-desc">Pedacinhos de KitKat Nestlé</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Ouro Branco">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-ouro-branco"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Ouro Branco</span>
+                      <span class="tile-desc">Bombom Picado Lacta</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Laka">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-laka"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Chocolate Laka</span>
+                      <span class="tile-desc">Chocolate Branco Lacta</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Paçoca">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-pacoca"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Paçoca Amor</span>
+                      <span class="tile-desc">Rolha Esfarelada</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Pé de Moleque">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-pe-de-moleque"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Pé de Moleque</span>
+                      <span class="tile-desc">Crocante com Amendoim</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="tile-option">
+                  <input type="checkbox" name="acaiToppings" value="Confetes M&Ms">
+                  <div class="tile-card">
+                    <div class="tile-real-photo photo-topping-confetes"></div>
+                    <div class="tile-details">
+                      <span class="tile-name">Confetes</span>
+                      <span class="tile-desc">Pastilhas M&Ms</span>
+                    </div>
+                    <div class="tile-check">
+                      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Column: Visual Preview & Order Summary -->
+        <div class="montar-summary-col">
+          <div class="montar-sticky-wrapper">
+            
+            <!-- Premium Açaí Real Photo Preview -->
+            <div class="acai-preview-container reveal">
+              <span class="preview-label">Sua Combinação</span>
+              <div class="acai-real-photo-preview" id="realPhotoPreview">
+                <img src="images/acai-real.jpg?v=3" alt="Morada do Açaí Premium" class="acai-preview-img">
+                <div class="acai-preview-overlay">
+                  <span class="acai-preview-badge" id="previewSizeBadge">Copo 300ml</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sticky Summary Card -->
+            <div class="montar-summary-card reveal">
+              <h3 class="summary-card-title">Resumo da sua Morada</h3>
+              <div class="summary-details">
+                <div class="summary-line">
+                  <span class="label">Tamanho:</span>
+                  <span id="summarySize" class="val">Copo 300ml</span>
+                </div>
+                <div class="summary-line">
+                  <span class="label">Cremes:</span>
+                  <span id="summaryCremes" class="val">Nenhum selecionado</span>
+                </div>
+                <div class="summary-line">
+                  <span class="label">Frutas:</span>
+                  <span id="summaryFrutas" class="val">Nenhuma selecionada</span>
+                </div>
+                <div class="summary-line">
+                  <span class="label">Acompanhamentos:</span>
+                  <span id="summaryToppings" class="val">Nenhum selecionado</span>
+                </div>
+              </div>
+              
+              <div class="summary-divider"></div>
+              
+              <div class="summary-total-section">
+                <span class="total-label">Subtotal:</span>
+                <span id="montarTotalPrice" class="total-val">R$ 15,90</span>
+              </div>
+              
+              <button type="submit" form="acaiForm" class="btn-add-to-cart-page" id="btnAddToCartPage">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; display: inline-block; vertical-align: middle;">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Adicionar ao Carrinho
+              </button>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="index.html#home" class="logo">
+            <img src="images/logo.png?v=2" alt="Morada do Açaí Logo">
+            <div class="logo-text">
+              <span class="brand">Morada do Açaí</span>
+              <span class="tagline">Casa do Verdadeiro Açaí</span>
+            </div>
+          </a>
+          <p class="footer-desc">Oferecemos o verdadeiro açaí do Norte, 100% puro e artesanal. Nosso compromisso é com o sabor autêntico e ingredientes premium.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="cardapio.html">Cardápio</a></li>
+            <li><a href="#">Monte Seu Açaí</a></li>
+            <li><a href="index.html#sobre">Sobre Nós</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Categorias</h4>
+          <ul>
+            <li><a href="cardapio.html?filter=acai">Açaí Puro</a></li>
+            <li><a href="cardapio.html?filter=tapiocas">Tapiocas</a></li>
+            <li><a href="cardapio.html?filter=crepes">Crepes</a></li>
+            <li><a href="cardapio.html?filter=sucos">Sucos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Funcionamento</h4>
+          <p class="time">Segunda a Domingo<br>14:00 às 22:00</p>
+          <h4>Contato</h4>
+          <p>Rua das Rosas, Pituba - Salvador/BA</p>
+          <p class="phone">(71) 3357-7733</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Morada do Açaí. Todos os direitos reservados. O verdadeiro açaí artesanal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/557133577733" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Floating Cart Button -->
+  <button class="cart-float-btn" id="cartFloatBtn" aria-label="Ver Carrinho">
+    <span class="cart-icon">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+    </span>
+    <span class="cart-badge" id="cartBadge">0</span>
+  </button>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Seu Pedido</h3>
+      <button class="close-drawer" id="closeDrawer">&times;</button>
+    </div>
+    
+    <!-- Cart Items View -->
+    <div class="cart-view" id="cartView">
+      <div class="cart-items" id="cartItemsList">
+        <div class="empty-cart-message">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <p>Seu carrinho está vazio.</p>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">R$ 0,00</span>
+        </div>
+        <button class="btn-checkout-next" id="btnCheckoutNext" disabled>Avançar para o Pedido</button>
+      </div>
+    </div>
+
+    <!-- Checkout Form View -->
+    <div class="checkout-view hidden" id="checkoutView">
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="clientName">Seu Nome *</label>
+          <input type="text" id="clientName" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="clientPhone">Seu WhatsApp *</label>
+          <input type="tel" id="clientPhone" required placeholder="(DD) 99999-9999">
+        </div>
+        <div class="form-group">
+          <label>Como deseja receber? *</label>
+          <div class="delivery-options">
+            <label class="delivery-type-label active">
+              <input type="radio" name="deliveryType" value="delivery" checked>
+              <span>Delivery (+R$ 5,00)</span>
+            </label>
+            <label class="delivery-type-label">
+              <input type="radio" name="deliveryType" value="retirada">
+              <span>Retirada no Local</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Address Fields -->
+        <div class="address-fields" id="addressFields">
+          <div class="form-group">
+            <label for="street">Rua e Número *</label>
+            <input type="text" id="street" placeholder="Rua das Flores, 123">
+          </div>
+          <div class="form-group">
+            <label for="neighborhood">Bairro *</label>
+            <input type="text" id="neighborhood" placeholder="Imbuí">
+          </div>
+          <div class="form-group">
+            <label for="complement">Complemento / Referência</label>
+            <input type="text" id="complement" placeholder="Apto 101, próximo ao mercado">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Forma de Pagamento *</label>
+          <select id="paymentMethod" required>
+            <option value="pix">Pix</option>
+            <option value="cartao">Cartão de Crédito / Débito</option>
+            <option value="dinheiro">Dinheiro</option>
+          </select>
+        </div>
+        
+        <div class="form-group hidden" id="changeGroup">
+          <label for="cashChange">Troco para quanto?</label>
+          <input type="number" id="cashChange" placeholder="Ex: 50" min="0">
+        </div>
+
+        <div class="checkout-actions">
+          <button type="button" class="btn-checkout-back" id="btnCheckoutBack">Voltar</button>
+          <button type="submit" class="btn-checkout-submit">Enviar via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
