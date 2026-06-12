@@ -108,19 +108,30 @@ function updateContactLinks() {
         const text = encodeURIComponent('Olá! Vi a promoção de sites por R$ 850 e gostaria de saber mais informações.');
         btn.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${text}`;
     });
+
+    const whatsappCareButtons = document.querySelectorAll('.btn-whatsapp-care');
+    whatsappCareButtons.forEach(btn => {
+        const text = encodeURIComponent('Olá! Gostaria de saber mais e garantir minha vaga no Plano Cuidado NWN por R$ 250/mês.');
+        btn.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${text}`;
+    });
 }
 
 // --- CALCULADORA INTERATIVA ---
 function initCalculator() {
     const calcItems = document.querySelectorAll('.calc-item');
-    const summaryList = document.getElementById('summary-list');
-    const totalDisplay = document.getElementById('total-display');
+    const radioItems = document.querySelectorAll('.calc-radio-item');
+    const setupList = document.getElementById('summary-setup-list');
+    const monthlyList = document.getElementById('summary-monthly-list');
+    const setupTotalDisplay = document.getElementById('setup-total-display');
+    const monthlyTotalDisplay = document.getElementById('monthly-total-display');
     const btnSendBudget = document.getElementById('btn-send-budget');
     
-    if (!totalDisplay) return;
+    if (!setupTotalDisplay || !monthlyTotalDisplay) return;
 
     let selectedAddons = new Map();
+    let selectedHostingId = 'hosting-care'; // Padrão: Plano Cuidado NWN
 
+    // Checkbox items (features)
     calcItems.forEach(item => {
         item.addEventListener('click', () => {
             const addonId = item.getAttribute('data-id');
@@ -135,60 +146,123 @@ function initCalculator() {
                 selectedAddons.set(addonId, { name: addonName, price: addonPrice });
             }
             
-            updateBudgetSummary(selectedAddons, totalDisplay, summaryList, btnSendBudget);
+            updateBudgetSummary(selectedAddons, selectedHostingId, setupList, monthlyList, setupTotalDisplay, monthlyTotalDisplay, btnSendBudget);
         });
     });
 
-    // Inicializa a calculadora com o preço base
-    updateBudgetSummary(selectedAddons, totalDisplay, summaryList, btnSendBudget);
+    // Radio items (hosting)
+    radioItems.forEach(radio => {
+        radio.addEventListener('click', () => {
+            radioItems.forEach(r => r.classList.remove('active'));
+            radio.classList.add('active');
+            selectedHostingId = radio.getAttribute('data-id');
+            
+            updateBudgetSummary(selectedAddons, selectedHostingId, setupList, monthlyList, setupTotalDisplay, monthlyTotalDisplay, btnSendBudget);
+        });
+    });
+
+    // Inicializa a calculadora com as seleções padrão
+    updateBudgetSummary(selectedAddons, selectedHostingId, setupList, monthlyList, setupTotalDisplay, monthlyTotalDisplay, btnSendBudget);
 }
 
 // Atualiza o HTML do resumo do orçamento
-function updateBudgetSummary(addons, totalDisplay, summaryList, btnSendBudget) {
-    let total = CONFIG.basePrice;
+function updateBudgetSummary(addons, hostingId, setupList, monthlyList, setupTotalDisplay, monthlyTotalDisplay, btnSendBudget) {
+    let setupTotal = CONFIG.basePrice;
+    let monthlyTotal = 0;
     
-    // Esvazia lista de resumo
-    summaryList.innerHTML = '';
+    // Esvazia as duas listas
+    setupList.innerHTML = '';
+    monthlyList.innerHTML = '';
     
-    // Adiciona o item Base
+    // 1. Adiciona o item Base do Site no Setup
     const baseItemHTML = `
         <div class="summary-list-item">
             <span>Site Profissional (Campanha Promo)</span>
             <span>R$ ${CONFIG.basePrice.toFixed(2).replace('.', ',')}</span>
         </div>
     `;
-    summaryList.insertAdjacentHTML('beforeend', baseItemHTML);
+    setupList.insertAdjacentHTML('beforeend', baseItemHTML);
     
-    // Adiciona adicionais selecionados
-    addons.forEach((details) => {
-        total += details.price;
-        const addonHTML = `
+    // 2. Adiciona adicionais selecionados no Setup
+    let addonsTextMsg = '';
+    if (addons.size > 0) {
+        addons.forEach((details) => {
+            setupTotal += details.price;
+            const addonHTML = `
+                <div class="summary-list-item">
+                    <span>+ ${details.name}</span>
+                    <span>R$ ${details.price.toFixed(2).replace('.', ',')}</span>
+                </div>
+            `;
+            setupList.insertAdjacentHTML('beforeend', addonHTML);
+            addonsTextMsg += `  - ${details.name} (+ R$ ${details.price})\n`;
+        });
+    } else {
+        addonsTextMsg = '  - Nenhum adicional (Apenas Site Promocional)\n';
+    }
+
+    // 3. Adiciona a Hospedagem selecionada no Mensal
+    const selectedRadio = document.querySelector(`.calc-radio-item[data-id="${hostingId}"]`);
+    let hostingName = 'Plano Cuidado NWN';
+    if (selectedRadio) {
+        // Se for independente, o custo para a NWN é R$ 0, pois o cliente contrata e paga diretamente ao provedor
+        if (hostingId === 'hosting-independent') {
+            monthlyTotal = 0;
+            hostingName = 'Hospedagem Própria (Independente)';
+        } else {
+            monthlyTotal = parseFloat(selectedRadio.getAttribute('data-monthly'));
+            hostingName = selectedRadio.querySelector('.calc-item-title').textContent.replace(' Recomendado', '');
+        }
+        
+        const hostingHTML = `
             <div class="summary-list-item">
-                <span>+ ${details.name}</span>
-                <span>R$ ${details.price.toFixed(2).replace('.', ',')}</span>
+                <span>${hostingName}</span>
+                <span>R$ ${monthlyTotal.toFixed(2).replace('.', ',')}/mês</span>
             </div>
         `;
-        summaryList.insertAdjacentHTML('beforeend', addonHTML);
-    });
+        monthlyList.insertAdjacentHTML('beforeend', hostingHTML);
+    }
     
-    // Atualiza exibição de preço
-    totalDisplay.textContent = `R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    // Atualiza os displays de preço
+    setupTotalDisplay.textContent = `R$ ${setupTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    monthlyTotalDisplay.textContent = `R$ ${monthlyTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/mês`;
     
-    // Atualiza link do WhatsApp de solicitação de orçamento
+    // Atualiza o texto do botão principal e o link do WhatsApp
+    const btnCalcText = document.getElementById('btn-calc-text');
+    const setupTotalFormatted = setupTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const monthlyTotalFormatted = monthlyTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    
+    let isCarePlan = (hostingId === 'hosting-care');
+    
+    if (btnCalcText) {
+        btnCalcText.textContent = isCarePlan ? 'Garantir Vaga + Plano Cuidado' : 'Garantir Apenas o Site';
+    }
+    
+    // Constrói mensagem comercial do WhatsApp do checkout da calculadora
+    const msg = `Olá NWN Studio! Montei meu orçamento no site.\n\n` +
+                `--- CRIAÇÃO DO SITE ---\n` +
+                `• Criação & Desenvolvimento: R$ ${setupTotalFormatted}\n` +
+                `• Funcionalidades Escolhidas:\n${addonsTextMsg}\n` +
+                `--- HOSPEDAGEM & SUPORTE ---\n` +
+                `• Plano: ${hostingName} (R$ ${monthlyTotalFormatted}/mês)\n\n` +
+                `Gostaria de fechar o projeto com essas configurações e garantir minha vaga!`;
+                
     if (btnSendBudget) {
-        let text = `Olá! Vi o site e quero garantir a promoção de R$ ${CONFIG.basePrice}. \n\n`;
-        if (addons.size > 0) {
-            text += `Gostaria de incluir as seguintes integrações/adicionais:\n`;
-            addons.forEach(details => {
-                text += `• ${details.name} (+ R$ ${details.price})\n`;
-            });
-            text += `\n`;
-        }
-        text += `Valor estimado personalizado: R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}\n`;
-        text += `Podemos agendar uma call para conversar sobre o meu projeto?`;
-        
-        const encodedText = encodeURIComponent(text);
-        btnSendBudget.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${encodedText}`;
+        btnSendBudget.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${encodeURIComponent(msg)}`;
+    }
+    
+    // Sincroniza também os botões da tabela comparativa abaixo
+    const btnSelectIndependent = document.getElementById('btn-select-independent');
+    const btnSelectCare = document.getElementById('btn-select-care');
+    
+    if (btnSelectIndependent) {
+        const textInd = `Olá! Montei meu orçamento no site da NWN Studio.\n\n• Investimento do Site: R$ ${setupTotalFormatted}\n${addonsTextMsg.replace(/  -/g, '•')}\n• Hospedagem: Independente (contratada por mim)\n\nGostaria de iniciar o projeto com essas configurações.`;
+        btnSelectIndependent.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${encodeURIComponent(textInd)}`;
+    }
+    
+    if (btnSelectCare) {
+        const textCare = `Olá! Montei meu orçamento no site da NWN Studio.\n\n• Investimento do Site: R$ ${setupTotalFormatted}\n${addonsTextMsg.replace(/  -/g, '•')}\n• Hospedagem: Plano Cuidado NWN (Incluso suporte + relatórios + R$ 250,00/mês)\n\nGostaria de fechar o projeto e garantir a vaga no Plano Cuidado.`;
+        btnSelectCare.href = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}&text=${encodeURIComponent(textCare)}`;
     }
 }
 
@@ -250,13 +324,24 @@ function initShowcase() {
     
     const fallbackCeasa = document.getElementById('fallback-ceasa');
     const fallbackVita = document.getElementById('fallback-vita');
+    const loader = document.getElementById('viewport-loader');
     
     if (!tabs.length) return;
+
+    // Hide loader once the iframe has finished loading
+    if (iframe && loader) {
+        iframe.addEventListener('load', () => {
+            loader.classList.add('hidden');
+        });
+    }
 
     // Project Tabs logic
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const project = tab.getAttribute('data-project');
+            
+            // Show loader during transition
+            if (loader) loader.classList.remove('hidden');
             
             // Toggle active tab
             tabs.forEach(t => t.classList.remove('active'));
@@ -300,6 +385,7 @@ function initShowcase() {
                 if (fallbackCeasa) fallbackCeasa.classList.add('hidden');
                 if (fallbackVita) fallbackVita.classList.remove('hidden');
                 if (urlDisplay) urlDisplay.textContent = 'nwnstudio.com.br/projects/clinica-vita';
+                if (loader) loader.classList.add('hidden'); // Hide immediately since there is no iframe load event
             }
         });
     });

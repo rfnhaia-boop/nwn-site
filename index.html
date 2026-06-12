@@ -19,7 +19,7 @@
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=2.1">
 </head>
 <body>
 
@@ -223,12 +223,26 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div class="mock-url-bar" id="mock-url-display">
-                                nwnstudio.com.br/projects/morada-do-acai
+                            <div class="mock-nav-buttons">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon refresh"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                            </div>
+                            <div class="mock-url-bar">
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3.5" class="mock-lock-icon">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <span id="mock-url-display">nwnstudio.com.br/projects/morada-do-acai</span>
                             </div>
                         </div>
                         <!-- Browser Iframe / Image fallback -->
                         <div class="mock-device-viewport">
+                            <!-- Modern Loading Spinner -->
+                            <div class="viewport-loader" id="viewport-loader">
+                                <div class="spinner"></div>
+                            </div>
+                            
                             <!-- Live iframe loading Morada do Acai -->
                             <iframe src="projects/morada-do-acai/index.html" class="portfolio-iframe" id="portfolio-iframe" title="Preview do Projeto"></iframe>
                             
@@ -329,41 +343,124 @@
                             <div class="calc-item-price">+ R$ 250</div>
                         </div>
 
-                        <!-- Item 6 -->
-                        <div class="calc-item" data-id="support" data-price="300">
-                            <div class="calc-checkbox">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
+                        <!-- Item 6: Removed Support & Maintenance (6 months) as it is now replaced by the hosting & support group below -->
+                    </div>
+
+                    <!-- Hospedagem & Suporte Pós-Lançamento (Radio Buttons) -->
+                    <div class="calc-group-section" style="margin-top: 35px;">
+                        <h4 class="calc-group-title">Hospedagem & Suporte Pós-Lançamento</h4>
+                        
+                        <!-- Hospedagem Própria -->
+                        <div class="calc-radio-item" data-id="hosting-independent" data-monthly="40">
+                            <div class="calc-radio-circle"></div>
                             <div class="calc-item-details">
-                                <div class="calc-item-title">Suporte e Manutenção (6 meses)</div>
-                                <div class="calc-item-desc">Cuidamos da sua infraestrutura, atualizações de segurança e backups semanais para evitar que seu site caia.</div>
+                                <div class="calc-item-title">Hospedagem Própria (Independente)</div>
+                                <div class="calc-item-desc">Você contrata a hospedagem e gerencia tudo por conta própria. Sem suporte técnico ou atualizações inclusas.</div>
                             </div>
-                            <div class="calc-item-price">+ R$ 300</div>
+                            <div class="calc-item-price">R$ 40/mês <span style="font-size: 0.75rem; font-weight: 400; opacity: 0.6;">(est.)</span></div>
+                        </div>
+
+                        <!-- Plano Cuidado NWN -->
+                        <div class="calc-radio-item active" data-id="hosting-care" data-monthly="250">
+                            <div class="calc-radio-circle"></div>
+                            <div class="calc-item-details">
+                                <div class="calc-item-title">Plano Cuidado NWN <span class="premium-badge">Recomendado</span></div>
+                                <div class="calc-item-desc">Hospedagem profissional + domínio inclusos, suporte técnico sem custo extra e 1 atualização de conteúdo mensal.</div>
+                            </div>
+                            <div class="calc-item-price">R$ 250/mês</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right: Summary Card -->
                 <div class="glass-card calc-summary">
-                    <h3 class="calc-summary-title">Resumo do Projeto</h3>
+                    <h3 class="calc-summary-title">Orçamento Final</h3>
                     
-                    <div id="summary-list" class="summary-list">
-                        <!-- Dynamic content -->
+                    <div class="summary-subtitle">Criação do Site (Pagamento Único)</div>
+                    <div id="summary-setup-list" class="summary-list">
+                        <!-- Dynamic setup list -->
                     </div>
                     
-                    <div class="summary-total">
-                        <span>Investimento Total</span>
-                        <div id="total-display" class="summary-total-price">R$ 850,00</div>
+                    <div class="summary-subtitle" style="margin-top: 15px;">Hospedagem & Manutenção (Mensal)</div>
+                    <div id="summary-monthly-list" class="summary-list" style="border-bottom: none; margin-bottom: 15px; padding-bottom: 0;">
+                        <!-- Dynamic hosting list -->
+                    </div>
+                    
+                    <div class="summary-totals-block">
+                        <div class="summary-total-row">
+                            <span>Investimento no Site:</span>
+                            <span id="setup-total-display" class="total-value">R$ 850,00</span>
+                        </div>
+                        <div class="summary-total-row highlight">
+                            <span>Hospedagem / Suporte:</span>
+                            <span id="monthly-total-display" class="total-value">R$ 250,00</span>
+                        </div>
                     </div>
                     
                     <a href="#" id="btn-send-budget" target="_blank" class="btn btn-primary calc-cta">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                         </svg>
-                        Garantir Site Personalizado
+                        <span id="btn-calc-text">Garantir Vaga + Plano Cuidado</span>
                     </a>
+                    
+                    <a href="#plano-cuidado" class="calc-detail-link">Ver detalhes sobre a hospedagem</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANO CUIDADO SECTION -->
+    <section id="plano-cuidado" class="section">
+        <div class="container">
+            <h2 class="section-title">Depois do Site: Plano Cuidado</h2>
+            <p class="section-subtitle">Duas formas de manter seu site no ar. Escolha a liberdade de gerenciar sozinho ou a comodidade do nosso suporte completo.</p>
+            
+            <div class="pricing-cards-container">
+                <!-- Card 1: Independent -->
+                <div class="pricing-card independent-card">
+                    <div class="card-header">
+                        <span class="card-tag">Independente</span>
+                        <h3>Hospedagem Própria</h3>
+                        <p class="card-desc">Você contrata a hospedagem e gerencia tudo por conta própria.</p>
+                    </div>
+                    <div class="card-price-block">
+                        <div class="card-price">R$ 40<span>/mês (est.)</span></div>
+                        <p class="card-price-sub">Custo médio do servidor + domínio anual</p>
+                    </div>
+                    <ul class="card-features">
+                        <li class="disabled"><span class="cross">✕</span> Sem domínio incluso</li>
+                        <li class="disabled"><span class="cross">✕</span> Sem suporte técnico incluso</li>
+                        <li class="disabled"><span class="cross">✕</span> Atualizações cobradas à parte</li>
+                        <li class="disabled"><span class="cross">✕</span> Sem relatórios de visitas</li>
+                        <li class="disabled"><span class="cross">✕</span> Backup manual por sua conta</li>
+                        <li><span class="check-gray">✓</span> Entregamos o código completo do site</li>
+                    </ul>
+                    <a href="#" id="btn-select-independent" target="_blank" class="btn btn-secondary card-btn">Levar Apenas o Site</a>
+                </div>
+                
+                <!-- Card 2: Plano Cuidado NWN (Featured) -->
+                <div class="pricing-card care-plan-card featured">
+                    <div class="card-badge">Recomendado</div>
+                    <div class="card-header">
+                        <span class="card-tag gold">Plano Cuidado NWN</span>
+                        <h3>Comodidade & Suporte</h3>
+                        <p class="card-desc">Nós cuidamos de toda a infraestrutura técnica e atualizações para você.</p>
+                    </div>
+                    <div class="card-price-block">
+                        <div class="card-price-old">De R$ 400,00/mês</div>
+                        <div class="card-price gold">R$ 250<span>,00/mês</span></div>
+                        <p class="card-price-sub">Vaga de lançamento • Sem fidelidade</p>
+                    </div>
+                    <ul class="card-features">
+                        <li><span class="check">✓</span> <strong>Hospedagem profissional + domínio</strong></li>
+                        <li><span class="check">✓</span> <strong>Suporte e correção de bugs</strong> sem custos</li>
+                        <li><span class="check">✓</span> <strong>1 atualização por mês</strong> (fotos, textos, etc.)</li>
+                        <li><span class="check">✓</span> <strong>Relatório mensal</strong> de visitas e cliques</li>
+                        <li><span class="check">✓</span> <strong>Backup semanal automático</strong></li>
+                        <li><span class="check">✓</span> <strong>Cancele quando quiser</strong>, sem fidelidade</li>
+                    </ul>
+                    <a href="#" id="btn-select-care" target="_blank" class="btn btn-primary card-btn">Garantir Plano Cuidado</a>
                 </div>
             </div>
         </div>
@@ -439,7 +536,7 @@
                     </div>
                     <div class="faq-body">
                         <div class="faq-content">
-                            Não cobramos nenhuma mensalidade de desenvolvimento! O site é 100% seu. Os únicos custos contínuos do site são a Hospedagem (onde o site fica guardado na nuvem) e o Domínio (o seu link .com.br). O domínio custa apenas R$ 40,00 por ano e a hospedagem custa em média de R$ 15,00 a R$ 25,00 por mês. Cuidamos de toda essa configuração inicial para você sem custo extra.
+                            O site é 100% seu. Oferecemos o Plano Cuidado opcional por R$ 250/mês (de R$ 400) — inclui hospedagem, domínio, 1 atualização mensal, suporte e relatórios. Sem fidelidade. Você pode também levar o site e contratar hospedagem por conta própria.
                         </div>
                     </div>
                 </div>
@@ -536,6 +633,7 @@
                     <li><a href="#promo">Campanha Promocional</a></li>
                     <li><a href="#portfolio">Projetos Recentes</a></li>
                     <li><a href="#calculadora">Calculadora de Orçamento</a></li>
+                    <li><a href="#plano-cuidado">Plano Cuidado NWN</a></li>
                     <li><a href="#faq">Perguntas Frequentes</a></li>
                 </ul>
             </div>
@@ -555,6 +653,6 @@
     </footer>
 
     <!-- JavaScript logic -->
-    <script src="main.js"></script>
+    <script src="main.js?v=2.2"></script>
 </body>
 </html>
