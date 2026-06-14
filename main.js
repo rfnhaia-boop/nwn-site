@@ -380,12 +380,12 @@ function initShowcase() {
                 if (fallbackVita) fallbackVita.classList.add('hidden');
                 if (iframe) iframe.src = 'https://isabelabalbo.vercel.app/';
                 if (urlDisplay) urlDisplay.textContent = 'isabelabalbo.adv.br';
-            } else if (project === 'vita') {
-                if (iframe) iframe.classList.add('hidden');
+            } else if (project === 'newflow') {
+                if (iframe) iframe.classList.remove('hidden');
                 if (fallbackCeasa) fallbackCeasa.classList.add('hidden');
-                if (fallbackVita) fallbackVita.classList.remove('hidden');
-                if (urlDisplay) urlDisplay.textContent = 'nwnstudio.com.br/projects/clinica-vita';
-                if (loader) loader.classList.add('hidden'); // Hide immediately since there is no iframe load event
+                if (fallbackVita) fallbackVita.classList.add('hidden');
+                if (iframe) iframe.src = 'https://sitenewflow.vercel.app/';
+                if (urlDisplay) urlDisplay.textContent = 'sitenewflow.vercel.app';
             }
         });
     });
