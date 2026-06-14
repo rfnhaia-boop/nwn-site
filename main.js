@@ -18,7 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     updateContactLinks();
     initShowcase();
+    initNewflowPreview();
 });
+
+// Escala o iframe do New Flow pra exibir o site em proporção desktop real
+function initNewflowPreview() {
+    const screen = document.querySelector('.newflow-screen');
+    if (!screen) return;
+    const frame = screen.querySelector('iframe');
+    if (!frame) return;
+
+    const BASE_W = 1280;   // largura "desktop" simulada
+    const BASE_H = 860;    // recorte vertical exibido
+
+    const rescale = () => {
+        const scale = screen.clientWidth / BASE_W;
+        frame.style.width = BASE_W + 'px';
+        frame.style.height = BASE_H + 'px';
+        frame.style.transform = 'scale(' + scale + ')';
+        screen.style.height = (BASE_H * scale) + 'px';
+    };
+
+    rescale();
+    window.addEventListener('resize', rescale);
+    window.addEventListener('load', rescale);
+}
 
 // Altera estilo do header ao rolar a página
 function initHeaderScroll() {
