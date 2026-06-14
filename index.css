@@ -1520,6 +1520,157 @@ html {
     border-top: 1px solid rgba(255, 255, 255, 0.02);
 }
 
+/* --- NEW FLOW — PRODUTO NEW COMPANY --- */
+.newflow-box {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(203, 213, 225, 0.04) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: var(--border-radius-lg);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+}
+.newflow-box::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    filter: blur(70px);
+    opacity: 0.35;
+    pointer-events: none;
+}
+.newflow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+.newflow-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid var(--border-color-glow);
+    border-radius: var(--border-radius-sm);
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--text-neon);
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.newflow-badge svg { width: 15px; height: 15px; }
+.newflow-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.05;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+.newflow-tagline {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-white);
+    margin-bottom: 16px;
+}
+.newflow-tagline strong { color: var(--text-neon); font-weight: 700; }
+.newflow-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 28px;
+    max-width: 480px;
+}
+.newflow-modules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+}
+.newflow-modules span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+.newflow-modules svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+.newflow-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.newflow-mock {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--border-color-glow);
+    background: #0a0a0c;
+}
+.newflow-mock-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-color);
+}
+.newflow-mock-dots { display: flex; gap: 6px; flex-shrink: 0; }
+.newflow-mock-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+}
+.newflow-mock-url {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 0.74rem;
+    color: var(--text-muted);
+}
+.newflow-mock-url svg { width: 11px; height: 11px; flex-shrink: 0; }
+.newflow-mock-viewport {
+    height: 400px;
+    overflow: hidden;
+    background: #fff;
+}
+.newflow-mock-viewport iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .newflow-grid { grid-template-columns: 1fr; gap: 36px; }
+    .newflow-box { padding: 32px 24px; }
+    .newflow-preview { order: -1; }
+    .newflow-mock-viewport { height: 300px; }
+}
+@media (max-width: 480px) {
+    .newflow-title { font-size: 2.2rem; }
+    .newflow-modules { grid-template-columns: repeat(2, 1fr); }
+    .newflow-actions .btn { width: 100%; }
+}
+
 /* Mobile menu overlay */
 @media (max-width: 768px) {
     .hamburger {
