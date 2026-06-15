@@ -118,14 +118,14 @@
         <div class="container">
             <h2 class="section-title">Nossos Projetos</h2>
             <p class="section-subtitle">Interaja com os projetos reais desenvolvidos por nós. Alterne entre os modos celular e computador para testar a responsividade em tempo real.</p>
-            
-            <div class="showcase-container">
-                <!-- Left: Sidebar controls and info -->
-                <div class="showcase-info">
+
+            <div class="showcase-new">
+                <!-- Barra superior: tabs horizontais + toggle device -->
+                <div class="showcase-topbar">
                     <div class="showcase-tabs">
                         <button class="showcase-tab active" data-project="morada">
                             <h4>Morada do Açaí</h4>
-                            <span>Landing Page & Cardápio Digital</span>
+                            <span>Landing Page & Cardápio</span>
                         </button>
                         <button class="showcase-tab" data-project="balbo">
                             <h4>Isabela Balbo</h4>
@@ -133,138 +133,103 @@
                         </button>
                         <button class="showcase-tab" data-project="newflow">
                             <h4>New Flow</h4>
-                            <span>ERP SaaS & Sistema de Gestão</span>
+                            <span>ERP SaaS</span>
                         </button>
                     </div>
-
-                    <!-- Project description blocks (toggled by JS) -->
-                    <div class="project-details" id="details-morada">
-                        <p class="project-desc">
-                            Uma landing page desenvolvida para captação de pedidos e fortalecimento da marca local de uma açaíteria. Conta com cardápio dinâmico, integração com carrinho de compras e envio de pedidos direto para o WhatsApp.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">HTML5 / CSS3</span>
-                            <span class="portfolio-tag">JavaScript Reativo</span>
-                            <span class="portfolio-tag">WhatsApp API</span>
-                            <span class="portfolio-tag">Foco em Conversão</span>
-                        </div>
-                        <div class="device-toggles" id="morada-device-toggles">
-                            <button class="btn btn-secondary btn-device active" data-device="desktop">
-                                Desktop
-                            </button>
-                            <button class="btn btn-secondary btn-device" data-device="mobile">
-                                Celular
-                            </button>
-                        </div>
-                        <a href="projects/morada-do-acai/index.html" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
-                            Abrir em Nova Aba
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="project-details hidden" id="details-balbo">
-                        <p class="project-desc">
-                            Landing page institucional e altamente sofisticada desenvolvida para a Dra. Isabela Balbo. Transmite autoridade e profissionalismo com seções explicativas de atuação, design elegante com efeitos metálicos e integração direta com WhatsApp.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">HTML5 / CSS3</span>
-                            <span class="portfolio-tag">JavaScript</span>
-                            <span class="portfolio-tag">Design Exclusivo</span>
-                            <span class="portfolio-tag">Otimização de SEO</span>
-                        </div>
-                        <div class="device-toggles" id="balbo-device-toggles">
-                            <button class="btn btn-secondary btn-device active" data-device="desktop">
-                                Desktop
-                            </button>
-                            <button class="btn btn-secondary btn-device" data-device="mobile">
-                                Celular
-                            </button>
-                        </div>
-                        <a href="https://isabelabalbo.vercel.app/" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
-                            Abrir em Nova Aba
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="project-details hidden" id="details-newflow">
-                        <p class="project-desc">
-                            Landing page moderna de alta conversão desenvolvida para o sistema ERP SaaS New Flow. Apresenta recursos do sistema, módulos de gestão fiscal/PDV, planos de assinatura e design elegante com fundo fluido escuro e vídeo integrado.
-                        </p>
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">HTML5 / CSS3</span>
-                            <span class="portfolio-tag">JavaScript Interativo</span>
-                            <span class="portfolio-tag">Design Responsivo</span>
-                            <span class="portfolio-tag">Otimização SEO</span>
-                        </div>
-                        <div class="device-toggles" id="newflow-device-toggles">
-                            <button class="btn btn-secondary btn-device active" data-device="desktop">
-                                Desktop
-                            </button>
-                            <button class="btn btn-secondary btn-device" data-device="mobile">
-                                Celular
-                            </button>
-                        </div>
-                        <a href="https://sitenewflow.vercel.app/" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
-                            Abrir em Nova Aba
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3 21 3 21 9"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                        </a>
+                    <div class="device-toggles">
+                        <button class="btn btn-secondary btn-device active" data-device="desktop">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            Desktop
+                        </button>
+                        <button class="btn btn-secondary btn-device" data-device="mobile">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                            Celular
+                        </button>
                     </div>
                 </div>
 
-                <!-- Right: Visualizer device mockup -->
-                <div class="showcase-preview">
-                    <!-- Browser container (Desktop Mode by default) -->
-                    <div class="mock-device desktop" id="preview-frame-container">
-                        <!-- Browser Header -->
-                        <div class="mock-device-header">
-                            <div class="mock-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="mock-nav-buttons">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon refresh"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
-                            </div>
-                            <div class="mock-url-bar">
-                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3.5" class="mock-lock-icon">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
-                                <span id="mock-url-display">nwnstudio.com.br/projects/morada-do-acai</span>
-                            </div>
+                <!-- Preview full-width -->
+                <div class="mock-device desktop" id="preview-frame-container">
+                    <div class="mock-device-header">
+                        <div class="mock-dots"><span></span><span></span><span></span></div>
+                        <div class="mock-nav-buttons">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mock-nav-icon refresh"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
                         </div>
-                        <!-- Browser Iframe / Image fallback -->
-                        <div class="mock-device-viewport">
-                            <!-- Modern Loading Spinner -->
-                            <div class="viewport-loader" id="viewport-loader">
-                                <div class="spinner"></div>
-                            </div>
-                            
-                            <!-- Live iframe loading Morada do Acai -->
-                            <iframe src="projects/morada-do-acai/index.html" class="portfolio-iframe" id="portfolio-iframe" title="Preview do Projeto"></iframe>
-                            
-                            <!-- Fallback static previews for Next.js / Other projects -->
-                            <div class="preview-fallback hidden" id="fallback-ceasa">
-                                <img src="assets/mockup_ceasa.png" alt="Preview Ceasa Delivery" class="portfolio-fallback-img">
-                            </div>
+                        <div class="mock-url-bar">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3.5" class="mock-lock-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            <span id="mock-url-display">nwnstudio.com.br/projects/morada-do-acai</span>
+                        </div>
+                    </div>
+                    <div class="mock-device-viewport">
+                        <div class="viewport-loader" id="viewport-loader"><div class="spinner"></div></div>
+                        <iframe src="projects/morada-do-acai/index.html" class="portfolio-iframe" id="portfolio-iframe" title="Preview do Projeto"></iframe>
+                        <div class="preview-fallback hidden" id="fallback-ceasa">
+                            <img src="assets/mockup_ceasa.png" alt="Preview Ceasa Delivery" class="portfolio-fallback-img">
+                        </div>
+                        <div class="preview-fallback hidden" id="fallback-vita">
+                            <img src="assets/mockup_vita.png" alt="Preview Clínica Vita" class="portfolio-fallback-img">
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="preview-fallback hidden" id="fallback-vita">
-                                <img src="assets/mockup_vita.png" alt="Preview Clínica Vita" class="portfolio-fallback-img">
+                <!-- Info do projeto abaixo do preview -->
+                <div class="showcase-details">
+                    <div class="project-details" id="details-morada">
+                        <div class="project-details-inner">
+                            <div class="project-details-text">
+                                <h3 class="project-name">Morada do Açaí</h3>
+                                <p class="project-desc">Uma landing page desenvolvida para captação de pedidos e fortalecimento da marca local de uma açaíteria. Conta com cardápio dinâmico, integração com carrinho de compras e envio de pedidos direto para o WhatsApp.</p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">HTML5 / CSS3</span>
+                                    <span class="portfolio-tag">JavaScript Reativo</span>
+                                    <span class="portfolio-tag">WhatsApp API</span>
+                                    <span class="portfolio-tag">Foco em Conversão</span>
+                                </div>
                             </div>
+                            <a href="projects/morada-do-acai/index.html" target="_blank" class="btn btn-secondary project-link-btn">
+                                Abrir em Nova Aba
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-details hidden" id="details-balbo">
+                        <div class="project-details-inner">
+                            <div class="project-details-text">
+                                <h3 class="project-name">Isabela Balbo</h3>
+                                <p class="project-desc">Landing page institucional e altamente sofisticada desenvolvida para a Dra. Isabela Balbo. Transmite autoridade e profissionalismo com seções explicativas de atuação, design elegante com efeitos metálicos e integração direta com WhatsApp.</p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">HTML5 / CSS3</span>
+                                    <span class="portfolio-tag">JavaScript</span>
+                                    <span class="portfolio-tag">Design Exclusivo</span>
+                                    <span class="portfolio-tag">Otimização de SEO</span>
+                                </div>
+                            </div>
+                            <a href="https://isabelabalbo.vercel.app/" target="_blank" class="btn btn-secondary project-link-btn">
+                                Abrir em Nova Aba
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-details hidden" id="details-newflow">
+                        <div class="project-details-inner">
+                            <div class="project-details-text">
+                                <h3 class="project-name">New Flow</h3>
+                                <p class="project-desc">Landing page moderna de alta conversão desenvolvida para o sistema ERP SaaS New Flow. Apresenta recursos do sistema, módulos de gestão fiscal/PDV, planos de assinatura e design elegante com fundo fluido escuro e vídeo integrado.</p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">HTML5 / CSS3</span>
+                                    <span class="portfolio-tag">JavaScript Interativo</span>
+                                    <span class="portfolio-tag">Design Responsivo</span>
+                                    <span class="portfolio-tag">Otimização SEO</span>
+                                </div>
+                            </div>
+                            <a href="https://sitenewflow.vercel.app/" target="_blank" class="btn btn-secondary project-link-btn">
+                                Abrir em Nova Aba
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -713,6 +678,6 @@
     </footer>
 
     <!-- JavaScript logic -->
-    <script src="main.js?v=2.4"></script>
+    <script src="main.js?v=2.5"></script>
 </body>
 </html>
