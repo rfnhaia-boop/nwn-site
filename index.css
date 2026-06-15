@@ -673,6 +673,7 @@ header.scrolled {
     height: 100%;
     border: none;
     background: #030303;
+    transform-origin: top left;
 }
 
 .preview-fallback {
