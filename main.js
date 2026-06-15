@@ -411,6 +411,10 @@ function initShowcase() {
                 if (iframe) iframe.src = 'https://sitenewflow.vercel.app/';
                 if (urlDisplay) urlDisplay.textContent = 'sitenewflow.vercel.app';
             }
+
+            // reaplica a escala desktop ao novo projeto
+            requestAnimationFrame(scalePortfolioPreview);
+            setTimeout(scalePortfolioPreview, 450);
         });
     });
 
@@ -433,6 +437,39 @@ function initShowcase() {
                     previewContainer.classList.add('desktop');
                 }
             }
+
+            // recalcula a escala (imediato + após a transição de largura)
+            scalePortfolioPreview();
+            setTimeout(scalePortfolioPreview, 450);
         });
     });
+
+    scalePortfolioPreview();
 }
+
+// Escala o preview do portfólio pra exibir o site em layout desktop real
+function scalePortfolioPreview() {
+    const container = document.getElementById('preview-frame-container');
+    const viewport = container ? container.querySelector('.mock-device-viewport') : null;
+    const frame = document.getElementById('portfolio-iframe');
+    if (!container || !viewport || !frame) return;
+
+    // Modo celular: layout mobile nativo, sem escala
+    if (container.classList.contains('mobile')) {
+        frame.style.width = '100%';
+        frame.style.height = '100%';
+        frame.style.transform = 'none';
+        return;
+    }
+
+    // Modo desktop: renderiza a 1280px e reduz proporcionalmente pra caber
+    const BASE_W = 1280;
+    const scale = viewport.clientWidth / BASE_W;
+    if (!scale) return;
+    frame.style.width = BASE_W + 'px';
+    frame.style.height = (viewport.clientHeight / scale) + 'px';
+    frame.style.transformOrigin = 'top left';
+    frame.style.transform = 'scale(' + scale + ')';
+}
+window.addEventListener('resize', scalePortfolioPreview);
+window.addEventListener('load', scalePortfolioPreview);
