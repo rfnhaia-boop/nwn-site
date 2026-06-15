@@ -444,36 +444,37 @@ function initShowcase() {
         });
     });
 
+    // chama imediatamente e após o primeiro paint para garantir dimensões corretas
     scalePortfolioPreview();
+    setTimeout(scalePortfolioPreview, 50);
 }
 
-// Escala o preview do portfólio pra exibir o site em layout desktop real
+// Escala o preview do portfólio — mesma técnica do initNewflowPreview
 function scalePortfolioPreview() {
-    requestAnimationFrame(() => {
-        const container = document.getElementById('preview-frame-container');
-        const viewport = container ? container.querySelector('.mock-device-viewport') : null;
-        const frame = document.getElementById('portfolio-iframe');
-        if (!container || !viewport || !frame) return;
+    const container = document.getElementById('preview-frame-container');
+    const viewport = container ? container.querySelector('.mock-device-viewport') : null;
+    const frame = document.getElementById('portfolio-iframe');
+    if (!container || !viewport || !frame) return;
 
-        // Modo celular: layout mobile nativo, sem escala
-        if (container.classList.contains('mobile')) {
-            frame.style.width = '100%';
-            frame.style.height = '100%';
-            frame.style.transform = 'none';
-            return;
-        }
+    // Modo celular: layout mobile nativo, sem escala
+    if (container.classList.contains('mobile')) {
+        frame.style.width = '375px';
+        frame.style.height = '667px';
+        frame.style.transform = 'none';
+        viewport.style.height = '667px';
+        return;
+    }
 
-        // getBoundingClientRect() é mais confiável que clientWidth em qualquer momento do ciclo
-        const rect = viewport.getBoundingClientRect();
-        const BASE_W = 1280;
-        const scale = rect.width / BASE_W;
-        if (!scale) return;
+    // Modo desktop: renderiza a 1280px e reduz proporcionalmente — viewport altura controlada pelo JS
+    const BASE_W = 1280;
+    const BASE_H = 720;
+    const scale = viewport.clientWidth / BASE_W;
+    if (!scale) return;
 
-        frame.style.width  = BASE_W + 'px';
-        frame.style.height = (rect.height / scale) + 'px';
-        frame.style.transformOrigin = 'top left';
-        frame.style.transform = 'scale(' + scale + ')';
-    });
+    frame.style.width = BASE_W + 'px';
+    frame.style.height = BASE_H + 'px';
+    frame.style.transform = 'scale(' + scale + ')';
+    viewport.style.height = (BASE_H * scale) + 'px';
 }
 window.addEventListener('resize', scalePortfolioPreview);
 window.addEventListener('load', scalePortfolioPreview);

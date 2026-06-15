@@ -595,8 +595,7 @@ header.scrolled {
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    height: 600px;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.4s, border-width 0.4s;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.4s, border-width 0.4s;
     box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8);
     overflow: hidden;
     position: relative;
@@ -604,7 +603,6 @@ header.scrolled {
 
 .mock-device.desktop {
     width: 100%;
-    height: 600px;
 }
 
 .mock-device.mobile {
@@ -669,8 +667,7 @@ header.scrolled {
 }
 
 .portfolio-iframe {
-    width: 100%;
-    height: 100%;
+    display: block;
     border: none;
     background: #030303;
     transform-origin: top left;
